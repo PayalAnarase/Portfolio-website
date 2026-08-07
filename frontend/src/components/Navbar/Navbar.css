@@ -1,0 +1,208 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 80px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index:1000;
+
+    background:transparent;
+
+    transition:all 0.3s ease;
+}
+
+/* Navbar after scrolling */
+
+.navbar.scrolled{
+    background:#ffffff;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo h2{
+    color:#2563eb;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+    list-style:none;
+}
+
+.nav-links li{
+    font-size:17px;
+    font-weight:500;
+}
+
+.nav-links a{
+    color:#222;
+    text-decoration:none;
+    position:relative;
+    transition:0.3s ease;
+}
+
+/* Underline animation */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#2563eb;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* ===========================
+   RESUME BUTTON
+=========================== */
+
+.resume-btn{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#2563eb;
+
+    color:white !important;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.resume-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   MENU ICON
+=========================== */
+
+.menu-icon{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:#222;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+    .navbar{
+        padding:0 40px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        height:70px;
+        padding:0 25px;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:70px;
+
+        left:-100%;
+
+        width:100%;
+
+        background:#ffffff;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+        padding:30px 0;
+
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+        transition:0.35s ease;
+    }
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .resume-btn{
+        width:180px;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo h2{
+        font-size:24px;
+    }
+
+    .navbar{
+        padding:0 20px;
+    }
+
+}
