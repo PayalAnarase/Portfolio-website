@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG","False")=="True"
 
 ALLOWED_HOSTS = [
-    os.environ.get("RENDER_ENTERNAL_HOSTNAME","localhost"),
+    "portfolio-website-5dvw.onrender.com",
 ]
 
 
