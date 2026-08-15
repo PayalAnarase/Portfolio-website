@@ -1,10 +1,6 @@
-import axios from "axios";
-
-
-const API_URL = '${import.meta.env.VITE_API_URL}education/';
-
+import API from "./api";
 
 export const getEducation = async () => {
-    const response = await axios.get(API_URL);
+    const response = await API.get("education/");
     return response.data;
 };
